@@ -14,6 +14,12 @@
 
     $result = $myInteger + $x;
     echo "<br>$result";
+    echo $color, "is", "a";
+
+    $var = "Bella";
+    $result = print 'My Border Collie is named $var<br>';
+    echo $result;
+    echo $var, " is", " a", " bad", " girl";
     ?>
 
 </body>
