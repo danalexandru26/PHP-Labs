@@ -34,6 +34,107 @@
         }
         echo '<br>';
     }
+
+
+    class Spaceship
+    {
+        public $name;
+        private $anchorShipyard;
+
+        public function __construct($name, $anchorShipyard)
+        {
+            $this->name = $name;
+            $this->anchorShipyard = $anchorShipyard;
+        }
+
+        public function currentAnchor()
+        {
+            echo "The ship is docked at the following shipyard: $this->anchorShipyard";
+        }
+
+        public function dockShip($shipyard)
+        {
+            $this->anchorShipyard = $shipyard;
+        }
+    }
+
+    $spaceshipName = "Ziggurat";
+    $currentAnchor = "Eridani";
+    $spaceship = new Spaceship($spaceshipName, $currentAnchor);
+
+    var_dump($spaceship);
+
+    $nullVAR;
+
+    var_dump($nullVAR);
+
+    $instantiatedNull = NULL;
+
+    $stringData = "Hello World!";
+
+    $stringData = NULL;
+
+    var_dump($instantiatedNull);
+
+    $nameString = "Bella";
+    $nameArray = (array) $nameString;
+
+    print $nameArray . '<br>';
+
+    var_dump($nameArray);
+
+    class Shipyard
+    {
+        public $piers;
+        public $wharves;
+        private $capacity;
+        private $dockedShips;
+
+        public function __construct($piers, $wharves, $capacity, $dockedShips)
+        {
+            $this->piers = $piers;
+            $this->wharves = $wharves;
+
+            $this->capacity = $capacity;
+
+            $this->dockedShips = $dockedShips;
+        }
+
+        public function information()
+        {
+            echo "This shipyard has $this->piers piers, $this->wharves wharves, $this->capacity storage capacity, $this->dockedShips currently docked ships.<br>";
+        }
+
+        public function dockShip()
+        {
+            $this->dockedShips++;
+        }
+
+        public function undockShip()
+        {
+            if ($this->dockedShips > 0)
+                $this->dockedShips--;
+        }
+    }
+
+    $myShipyard = new Shipyard(10, 5, 1500, 0);
+
+    $myShipyard->information();
+
+    $castShipyard = (array) $myShipyard;
+
+    var_dump($castShipyard);
+
+    print $castShipyard . '<br>';
+
+    $myFavoriteInteger = 69;
+
+    print 'My favorite number is: ' . $myFavoriteInteger . '<br>';
+
+    $myFavoriteInteger = NULL;
+
+    var_dump($myFavoriteInteger);
+
     ?>
 </body>
 

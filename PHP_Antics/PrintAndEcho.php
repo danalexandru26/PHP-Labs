@@ -92,8 +92,8 @@ My Border Collie is named Bella
 Bella is a bad girl
                 </pre>
                 <p>Not only can we see how <code>Print</code> returns a value, which in our case is 1, it can also be
-                    seen that <code>echo</code> can be used to output multiple strings at once, a functionality that
-                    <code>echo</code> lacks.
+                    seen that <code>Echo</code> can be used to output multiple strings at once, a functionality that
+                    <code>Print</code> lacks.
                 </p>
             </div>
             <div class="row justify-content-center my-2">

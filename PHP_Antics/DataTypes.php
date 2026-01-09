@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Echo and Print in PHP</title>
+    <title>Data Types in PHP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -15,7 +15,6 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PHP Data Types</title>
 </head>
 
 
@@ -196,6 +195,73 @@ Lucky 4</strong>
                 peculiarity that is foreign to most programming languages. This kind of structure is generally referred
                 to as a <code>tuple</code> by languages such as <em><code>C++</code></em>.
             </p>
+
+            <div class="col-8">
+                <h3>Objects</h3>
+            </div>
+            <p class="col-8">Object is the data type of variables instantiated with user-defined classes. A class
+                definition and object instantiation can be found in the example below.</p>
+            <pre class="col-8 borders bg-light">
+&lt;?php
+    <span style="color:red;">class</span> Spaceship {
+        <span style="color:red;">public</span> $name;
+        <span style="color:red;">private</span> $anchorShipyard;
+
+        <span style="color:red;">public function</span> __construct($name, $anchorShipyard) {
+            $this->name = $name;
+            $this->anchorShipyard = $anchorShipyard;
+        }
+
+        <span style="color:red;">public function</span> currentAnchor() {
+            echo "The ship is docked at the following shipyard: $this->anchorShipyard";
+        }
+
+        <span style="color:red;">public function</span> dockShip($shipyard) {
+            $this->anchorShipyard = $shipyard;
+        }
+    }
+
+    <span style="color:red;">$spaceshipName</span> = "Ziggurat";
+    <span style="color:red;">$currentAnchor</span> = "Eridani";
+    <span style="color:red;">$spaceship</span> = new Spaceship($spaceshipName, $currentAnchor);
+
+    var_dump(<span style="color:red;">$spaceship</span>);
+?&gt;
+
+<hr>
+The produced output will be the following:
+<strong>object(Spaceship)#1 (2) {
+  ["name"]=>
+  string(8) "Ziggurat"
+  ["anchorShipyard":"Spaceship":private]=>
+  string(7) "Eridani"
+}</strong>
+</pre>
+            <div class="col-8">
+                <h3>NULL</h3>
+            </div>
+            <p class="col-8">
+                NULL is the data type of variables that have no assigned value or NULL directly assigned.
+            </p>
+            <pre class="col-8 borders bg-light">
+&lt;?php
+    <span style="color:red;">$nullVAR</span>;
+    var_dump(<span style="color:red;">$nullVAR</span>);
+
+    <span style="color:red;">$instantiatedNull</span> = NULL;
+
+    <span style="color:red;">$stringData</span> = "Hello World!";
+    <span style="color:red;">$stringData</span> = NULL;
+
+    var_dump(<span style="color:red;">$instantiatedNull</span>);
+?&gt;
+
+<hr>
+The produced output will be the following:
+<strong>NULL
+NULL</strong>
+</pre>
+
         </div>
     </div>
 </body>
