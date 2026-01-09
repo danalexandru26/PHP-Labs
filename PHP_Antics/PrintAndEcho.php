@@ -17,7 +17,7 @@
 
 <body>
     <div class="container">
-        <h1 class="display-4 text-center my-4">Echo and Print in PHP</h1>
+        <h1 class="display-4 text-center my-4">1. Echo and Print in PHP</h1>
         <hr class="w-50 mx-auto">
 
         <!-- First centered column -->

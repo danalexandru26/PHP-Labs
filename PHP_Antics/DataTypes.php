@@ -21,7 +21,7 @@
 <body>
     <div class="container">
         <div class="row justify-content-center my-2">
-            <h1 class="display-4 text-center">PHP Data Types</h1>
+            <h1 class="display-4 text-center">2. PHP Data Types</h1>
             <hr class="w-50 mx-auto">
         </div>
         <div class="row justify-content-center my-2">
