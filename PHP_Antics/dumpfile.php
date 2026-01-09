@@ -135,6 +135,80 @@
 
     var_dump($myFavoriteInteger);
 
+    $shipClass = "Frigate";
+
+    if ($shipClass == "Frigate") {
+        print "Everybody knows frigates are faster than destroyers";
+    }
+
+    $shipClass2 = "Destroyer";
+
+    if ($shipClass2 == "Frigate") {
+        print "Everybody knows that frigates are not as swift as corvettes";
+    } elseif ($shipClass2 == "Destroyer") {
+        print "Destroyers are the kings of the open oceans";
+    } else {
+        print "You're the captain of a ragtag raft";
+    }
+
+    $cardValue = 3;
+
+    switch ($cardValue) {
+        case 1:
+            print "You lost!";
+            break;
+        case 2:
+            print "So close yet not there!";
+            break;
+        case 3:
+            print "You're victorious!";
+            break;
+        default:
+            print "Your card's value is out of the accepted range!";
+            break;
+    }
+
+    if ($cardValue == 1) {
+        print "You lost!";
+    } elseif ($cardValue == 2) {
+        print "So close yet not there!";
+    } elseif ($cardValue == 3) {
+        print "You're victorious!";
+    } else {
+        print "Your card's value is out of the accepted range!";
+    }
+
+    $whileCondition = 5;
+
+    while ($whileCondition > 0) {
+        $whileCondition -= 1;
+        print 'Current condition value: ' . $whileCondition . '&lt;br&gt;';
+    }
+
+    print '&lt;br&gt;';
+    $doWhileCondition = 1;
+
+    do {
+        print 'Current condition value: ' . $doWhileCondition . '&lt;br&gt;';
+        $doWhileCondition += 1;
+
+    } while ($doWhileCondition < 1);
+
+    print '&lt;br&gt;';
+
+    for ($x = 0; $x < 5; $x++) {
+        print 'Current &lt;em&gt;for&lt;/em&gt; condition value: ' . $x . '&lt;br&gt;';
+    }
+
+    print '&lt;br&gt;';
+
+    $sampleArray = array(1, 2, 3, 4, 5);
+
+    foreach ($sampleArray as $value) {
+        print 'Current value: ' . $value . '&lt;br&gt;';
+    }
+
+
     ?>
 </body>
 
