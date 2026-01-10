@@ -208,7 +208,51 @@
         print 'Current value: ' . $value . '&lt;br&gt;';
     }
 
+    //void function
+    function displayName($firstName, $lastName)
+    {
+        print 'First name: ' . $firstName . ' Last name: ' . $lastName . '&lt;br&gt;';
+    }
 
+
+    //returning function
+    
+    function computeSum($a, $b)
+    {
+        return $a + $b;
+    }
+
+    //returning function with explicit retunr type declaration
+    
+    function comuputeSumExplicit($a, $b): int
+    {
+        return $a + $b;
+    }
+
+    //default parameter value
+    function defaultValue($a = 50)
+    {
+        print 'If there is no passed variable, the default will be printed: ' . $a . ' &lt;br&gt;';
+    }
+
+    //Sum function a varidic number of arguments
+    function varidicSum(...$a)
+    {
+        $values = count($a);
+        $sum = 0;
+
+        for ($x = 0; $x < $values; $x++) {
+            $sum += $a[$x];
+        }
+
+        return $sum;
+    }
+
+    //passing by reference
+    function passByReference(&$a)
+    {
+        $a += 10;
+    }
     ?>
 </body>
 
