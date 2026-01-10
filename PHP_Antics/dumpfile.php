@@ -253,6 +253,58 @@
     {
         $a += 10;
     }
+
+    $declareArray = array(1, 2);
+
+    $declareStringArray = array("bella", "Maya", "Lucky");
+
+    //Array elements are updated using the assignment(=) and access([]) operators.
+    $declareArray[0] = 2;
+    $declareStringArray[0] = "Bella";
+
+    //the number of elements an array has can be found with the count(array) function.
+    print count($declareArray) . '<br>';
+
+    for ($i = 0; $i < count($declareArray); $i++) {
+        print $declareArray[$i] . '<br>';
+    }
+
+    for ($i = 0; $i < count($declareStringArray); $i++) {
+        print $declareStringArray[$i] . '<br>';
+    }
+
+    //Adding one or more items at a time to our array is performed by using the array_push(array, value) function
+    array_push($declareArray, 6, 7, 8);
+
+    for ($i = 0; $i < count($declareArray); $i++) {
+        print $declareArray[$i] . '<br>';
+    }
+
+    array_push($declareStringArray, "Vero", "Max");
+
+    for ($i = 0; $i < count($declareStringArray); $i++) {
+        print $declareStringArray[$i] . '<br>';
+    }
+
+    //We can also add an item at a time to the end of the array by using the following syntax: array[] = value
+    $declareArray[] = 100;
+    print $declareArray[count($declareArray) - 1] . '<br>';
+
+    //Adding elements can also be performed with the merging function, array_merge(array_a, array_b) : array
+    $mergedArray = array_merge($declareArray, [101, 102]);
+
+    for ($i = 0; $i < count($mergedArray); $i++) {
+        print $mergedArray[$i] . '<br>';
+    }
+
+    //Since arrays can hold a mix of different data type, the following element insertions are just as valid'
+    array_push($declareArray, "Uni");
+    $declareArray[] = "Nebula";
+
+    for ($i = 0; $i < count($declareArray); $i++) {
+        print $declareArray[$i] . '<br>';
+    }
+
     ?>
 </body>
 
