@@ -13,6 +13,23 @@
 </head>
 
 <body style="font-size:18px;">
+    <div class="container">
+        <main>
+            <div class="row my-2">
+                <div class="col-2">
+                    <aside>
+                        <p>test</p>
+                    </aside>
+                </div>
+                <div class="col-8 justify-content-center">
+                    <p>test</p>
+                </div>
+                <div class="col-2">
+                    <p>test</p>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 
 </html>
