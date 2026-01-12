@@ -1,0 +1,19 @@
+        a {
+            color: grey;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
+            font-style: italic;
+        }
+
+        pre {
+            background-color: #1c1e23;
+            color: #ECEFF4;
+            padding: 12px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: Consolas, 'Courier New', monospace;
+            font-size: 14px;
+        }

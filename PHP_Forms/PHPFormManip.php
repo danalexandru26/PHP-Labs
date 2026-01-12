@@ -8,32 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <style>
-        a {
-            color: grey;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: white;
-            font-style: italic;
-        }
-
-        pre {
-            background-color: #1c1e23;
-            color: #ECEFF4;
-            padding: 12px;
-            border-radius: 6px;
-            overflow-x: auto;
-            font-family: Consolas, 'Courier New', monospace;
-            font-size: 14px;
-        }
-    </style>
+    <link rel="stylesheet" href="../Styles/styling.css">
 </head>
 
 <body style="font-size:18px;">
