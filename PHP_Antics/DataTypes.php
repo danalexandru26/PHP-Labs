@@ -25,7 +25,8 @@
         <div class="row justify-content-center my-2">
             <div class="col-8">
                 <p>
-                    In all programing languages, data types are the fundamental instruments of information manipulation.
+                    In all programming languages, data types are the fundamental instruments of information
+                    manipulation.
                     They can be thought of as constainers that hold different kinds of data, offering the compiler or
                     interpreter a way to understand and correctly parse the information.
                 </p>
