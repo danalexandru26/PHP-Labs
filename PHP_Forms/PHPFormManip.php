@@ -26,7 +26,7 @@
     </style>
 </head>
 
-<body style="font-size:20px;">
+<body style="font-size:18px;">
     <div class="container">
         <div class="row">
             <main class="col-10">
