@@ -305,6 +305,36 @@
         print $declareArray[$i] . '<br>';
     }
 
+
+    function printArray(&$myArray)
+    {
+        foreach ($myArray as $entry) {
+            print $entry . ' ';
+        }
+        print '<br>';
+    }
+
+    $nameArray = array("Paul", "Feyd", "Shaddam", "Irulan");
+
+    printArray($nameArray);
+
+    array_pop($nameArray);
+
+    printArray($nameArray);
+
+    array_shift($nameArray);
+
+    printArray($nameArray);
+
+    $numericArray = array(6, 5, 4, 3, 10, 1);
+
+    sort($numericArray);
+
+    printArray($numericArray);
+
+    rsort($numericArray);
+
+    printArray($numericArray);
     ?>
 </body>
 
