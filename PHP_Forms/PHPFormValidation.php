@@ -64,7 +64,44 @@
                     </div>
                     <div>
                         <h3 id="actionAndUrlValidation">Action and URL Validation</h3>
-                        <p></p>
+                        <p>Action and URL validation refers to protecting the <code>action</code> field of our form.
+                            Without proper protection, a malitious user could attach additional <code>html</code> syntax
+                            to our URL. This could lead to illicit script execution, which often ends up in data
+                            breaches and personal information leaks.</p>
+
+                        <p>This problem makes itself evident when we use our form web-page as a form handler. In this
+                            scenario, the <code>field</code> looks like this:</p>
+                        <pre class="borders">
+<span style="color:#569cd6;">&lt;form</span> <span style="color:#dcdcaa;">method</span>=<span style="color:#ce9178;">"post"</span> <span style="color:#dcdcaa;">action</span>=<span style="color:#ce9178;">"&lt;?= $_SERVER['PHP_SELF'] ?&gt;"</span><span style="color:#569cd6;">&gt;</span>
+    <span style="color:#569cd6;">&lt;input</span> <span style="color:#dcdcaa;">type</span>=<span style="color:#ce9178;">"text"</span> <span style="color:#dcdcaa;">name</span>=<span style="color:#ce9178;">"name"</span><span style="color:#569cd6;">&gt;</span>
+    <span style="color:#569cd6;">&lt;input</span> <span style="color:#dcdcaa;">type</span>=<span style="color:#ce9178;">"submit"</span> <span style="color:#dcdcaa;">value</span>=<span style="color:#ce9178;">"Submit"</span><span style="color:#569cd6;">&gt;</span>
+<span style="color:#569cd6;">&lt;/form&gt;</span>
+</pre>
+                        <p>The superglobal variable <code>$_SERVER['PHP_SELF']</code> contains the name of the current
+                            script. It is used to ensure that the form submits to itself, preventing potential
+                            redirection attacks. However, it creates the possibility of cross-site scripting (XSS)
+                            vulnerabilities if not properly sanitized.</p>
+                        <p> To illustrate a basic XSS attack, suppose a malicious user enters the following URL in the
+                            address bar:
+                        <ul class="list-unstyled">
+                            <li><code>http://localhost/PHP_Labs/PHP_Forms/PHPFormValidation.php#formValidation/%22%3E%3Cscript%3Ealert('hacked')%3C/script%3E</code>.
+                        </ul>
+                        </p>
+
+                        <p>This is akin to the following translated URL:
+                        <ul class="list-unstyled">
+                            <li><code>http://localhost/PHP_Labs/PHP_Forms/PHPFormValidation.php#formValidation/&gt;&lt;script&gt;alert('hacked')&lt;/script&gt;</code>.
+                        </ul>
+                        </p>
+                        <p>Once the form data is completed and submitted, the malicious code will be executed. The
+                            script will be run, its data stealing and tampering capabilities being virtually endless,
+                            considering your web application is virtually unprotected.</p>
+                        <p>In order to prevent such an attack, we are obliged to use a <code>php</code> core library
+                            function, namely <code>htmlspecialchars()</code>. All this function does is escape the
+                            sensitive <code>html</code> tag characters. In other words, it converts <code><</code> and
+                            <code>></code> to <code>&amp;lt</code> and <code>&amp;gt</code> respectively. This way, we
+                            are protected from such insertion attacks.
+                        </p>
                     </div>
                 </div>
                 <aside class="col-2 d-none d-lg-block ps-4">
