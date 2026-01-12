@@ -23,6 +23,16 @@
             color: white;
             font-style: italic;
         }
+
+        pre {
+            background-color: #1c1e23;
+            color: #ECEFF4;
+            padding: 12px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: Consolas, 'Courier New', monospace;
+            font-size: 14px;
+        }
     </style>
 </head>
 
@@ -135,46 +145,50 @@
                             <p>In the code snippets below, there can be found two form examples, one for each data
                                 submitting method.</p>
                         </div>
-                        <pre class="col-10 borders" style="
-    background-color: #1c1e23;  /* slightly darker than bootstrap dark */
-    color: #ECEFF4;             /* off-white default text */
-    padding: 12px;
-    border-radius: 6px;
-    overflow-x: auto;
-    font-family: Consolas, 'Courier New', monospace;
-    font-size: 14px;
-">
-<span style="color:#569cd6;">&lt;!DOCTYPE html&gt;</span>
-<span style="color:#569cd6;">&lt;html&gt;</span>
-<span style="color:#569cd6;">&lt;head&gt;</span>
-    <span style="color:#569cd6;">&lt;meta</span> charset="utf-8"<span style="color:#569cd6;">&gt;</span>
-    <span style="color:#569cd6;">&lt;title&gt;</span>Simple GET Form<span style="color:#569cd6;">&lt;/title&gt;</span>
-<span style="color:#569cd6;">&lt;/head&gt;</span>
-<span style="color:#569cd6;">&lt;body&gt;</span>
+                        <pre class="col-10 borders">
+<span style="color:#82AAFF;">&lt;!DOCTYPE html&gt;</span>
+<span style="color:#82AAFF;">&lt;html&gt;</span>
+<span style="color:#82AAFF;">&lt;head&gt;</span>
+    <span style="color:#82AAFF;">&lt;meta</span> charset="utf-8"<span style="color:#82AAFF;">&gt;</span>
+    <span style="color:#82AAFF;">&lt;title&gt;</span>Simple GET Form<span style="color:#82AAFF;">&lt;/title&gt;</span>
+<span style="color:#82AAFF;">&lt;/head&gt;</span>
+<span style="color:#82AAFF;">&lt;body&gt;</span>
 
-<span style="color:#569cd6;">&lt;form</span> action="welcome_get.php" method="get"<span style="color:#569cd6;">&gt;</span>
+<span style="color:#82AAFF;">&lt;form</span> action="welcome_get.php" method="get"<span style="color:#82AAFF;">&gt;</span>
     Name: <span style="color:#d69d85;">&lt;input type="text" name="name"&gt;</span><br>
     E-mail: <span style="color:#d69d85;">&lt;input type="text" name="email"&gt;</span><br>
     <span style="color:#d69d85;">&lt;input type="submit" value="Submit"&gt;</span>
-<span style="color:#569cd6;">&lt;/form&gt;</span>
+<span style="color:#82AAFF;">&lt;/form&gt;</span>
 
-<span style="color:#569cd6;">&lt;/body&gt;</span>
-<span style="color:#569cd6;">&lt;/html&gt;</span>
-
-<hr>
-<strong>Output:</strong><br>
-A simple form appears with:<br>
-- A text input labeled "Name"<br>
-- A text input labeled "E-mail"<br>
-- A submit button<br>
+<span style="color:#82AAFF;">&lt;/body&gt;</span>
+<span style="color:#82AAFF;">&lt;/html&gt;</span>
 </pre>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-10">
                             <p>The most relevant line for integrating PHP into our forms is
                                 <code>action = *.php"</code>. It redirects the data cached into our <em>superglobal</em>
-                                variables to the page pointed to by the action attribute.
+                                variables to the page pointed to by the action attribute. A sample PHP dispatch page can
+                                be found below.
                             </p>
+                        </div>
+                        <pre class="col-10 borders" id="dispatchSample">
+<span style="color:#82AAFF;">&lt;html&gt;</span>
+<span style="color:#82AAFF;">&lt;body&gt;</span>
+
+Welcome <span style="color:#C792EA;">&lt;?php</span> <span style="color:#FF5370;">echo</span> $_GET["name"]; <span style="color:#C792EA;">?&gt;</span><br>
+Your email address is: <span style="color:#C792EA;">&lt;?php</span> <span style="color:#FF5370;">echo</span> $_GET["email"]; <span style="color:#C792EA;">?&gt;</span>
+
+<span style="color:#82AAFF;">&lt;/body&gt;</span>
+<span style="color:#82AAFF;">&lt;/html&gt;</span>
+</pre>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <p>Notice how PHP can appear integrated anywhere within the body of our HTML documented.
+                                This is intended and how PHP is generally used. All PHP segments can be treated as part
+                                of the same greater scope. All functions and variables are accessible if used
+                                in any nested scope of the one they're declared in.</p>
                         </div>
                     </div>
                 </div>
@@ -191,6 +205,7 @@ A simple form appears with:<br>
                         <li><a href="#usingGET">Using GET</a></li>
                         <li><a href="#usingPOST">Using POST</a></li>
                         <li><a href="#FormSample">PHP Form Sample</a></li>
+                        <li><a href="#dispatchSample">PHP Dispatch Sample</a></li>
                     </ul>
                 </div>
             </aside>
