@@ -13,6 +13,53 @@
 </head>
 
 <body style="font-size:18px;">
+    <?php
+    $name = "";
+    $category = "";
+    $type = "";
+
+    $hullStrength = "";
+    $shieldCapacity = "";
+
+    $cargoCapacity = "";
+    $liquidFuelCapacity = "";
+
+    $serviceCrew = "";
+    $marines = "";
+
+    $weaponryOutput = "";
+    $hardpoints = "";
+
+    $travelSpeed = "";
+    $thrust = "";
+    $hyperspeed = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        // Identity
+        $name = htmlspecialchars(trim($_POST["Name"] ?? ""));
+        $category = htmlspecialchars(trim($_POST["Category"] ?? ""));
+        $type = htmlspecialchars(trim($_POST["Type"] ?? ""));
+
+        $hullStrength = (int) ($_POST["hullStrength"] ?? 0);
+        $shieldCapacity = (int) ($_POST["ShieldCapacity"] ?? 0);
+
+        $cargoCapacity = (int) ($_POST["CargoCapacity"] ?? 0);
+        $liquidFuelCapacity = (int) ($_POST["LiquidFuel"] ?? 0);
+
+        $serviceCrew = (int) ($_POST["ServiceCrew"] ?? 0);
+        $marines = (int) ($_POST["MarineCrew"] ?? 0);
+
+        $weaponryOutput = (int) ($_POST["weapons"] ?? 0);
+        $hardpoints = (int) ($_POST["Hardpoints"] ?? 0);
+
+        $travelSpeed = (int) ($_POST["TravelSpeed"] ?? 0);
+        $thrust = (int) ($_POST["Thrust"] ?? 0);
+        $hyperspeed = (int) ($_POST["Hyperspeed"] ?? 0);
+    }
+
+    ?>
+
     <div class="container">
         <main>
             <div class="row pt-4">
@@ -166,47 +213,47 @@
                                         <div class="col-sm-6">
                                             <label class="form label" for="hullStrength">Hull Strength
                                                 (absortion):</label>
-                                            <input type="number" class="form-control" id="hullStrength"
-                                                placeholder="1500" required>
+                                            <input type="number" class="form-control" id="HullStrength"
+                                                name="hullStrength" placeholder="1500" required>
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form label" for="shieldCapacity">Shield Capacity
                                                 (flux):</label>
-                                            <input type="number" class="form-control" id="hullStrength"
-                                                placeholder="1000" required>
+                                            <input type="number" class="form-control" id="shieldCapacity"
+                                                name="ShieldCapacity" placeholder="1000" required>
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form label" for="cargoCapacity">Cargo Capacity
                                                 (containers):</label>
                                             <input type="number" class="form-control" id="cargoCapacity"
-                                                placeholder="5000" required>
+                                                name="CargoCapacity" placeholder="5000" required>
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form label" for="liquidFuelCapacity">Liquid Fuel Capacity
                                                 (tonnes):</label>
                                             <input type="number" class="form-control" id="liquidFuelCapacity"
-                                                placeholder="2000" required>
+                                                name="LiquidFuel" placeholder="2000" required>
                                         </div>
                                         <div class="col-sm-6">
-                                            <label class="form label" for="serviceCrew"></label>Service Crew:</label>
-                                            <input type="number" class="form-control" id="serviceCrew" placeholder="10"
-                                                required>
+                                            <label class="form label" for="serviceCrew">Service Crew:</label>
+                                            <input type="number" class="form-control" id="serviceCrew"
+                                                name="ServiceCrew" placeholder="10" required>
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form label" for="Marines">Marines:</label>
-                                            <input type="number" class="form-control" id="Marines" placeholder="10"
-                                                required>
+                                            <input type="number" class="form-control" id="Marines" name="MarineCrew"
+                                                placeholder="10" required>
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form label" for="weaponryOutput">Weaponry Output
                                                 (mass/sec):</label>
-                                            <input type="number" class="form-control" id="weaponryOutput"
+                                            <input type="number" class="form-control" id="weaponryOutput" name="weapons"
                                                 placeholder="500" required>
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form label" for="hardpoints">Hardpoints:</label>
-                                            <input type="number" class="form-control" id="hardpoints" placeholder="500"
-                                                required>
+                                            <input type="number" class="form-control" id="hardpoints" name="Hardpoints"
+                                                placeholder="500" required>
                                         </div>
                                         <div class="col-sm-4">
                                             <label class="form label" for="travelSpeed">Travel Speed</label>
