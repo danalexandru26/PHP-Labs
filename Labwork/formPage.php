@@ -162,6 +162,70 @@
                                             <select type="option" class="form-control" id="shipType"
                                                 name="Type"></select>
                                         </div>
+                                        <hr class="my-4">
+                                        <div class="col-sm-6">
+                                            <label class="form label" for="hullStrength">Hull Strength
+                                                (absortion):</label>
+                                            <input type="number" class="form-control" id="hullStrength"
+                                                placeholder="1500" required>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="form label" for="shieldCapacity">Shield Capacity
+                                                (flux):</label>
+                                            <input type="number" class="form-control" id="hullStrength"
+                                                placeholder="1000" required>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="form label" for="cargoCapacity">Cargo Capacity
+                                                (containers):</label>
+                                            <input type="number" class="form-control" id="cargoCapacity"
+                                                placeholder="5000" required>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="form label" for="liquidFuelCapacity">Liquid Fuel Capacity
+                                                (tonnes):</label>
+                                            <input type="number" class="form-control" id="liquidFuelCapacity"
+                                                placeholder="2000" required>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="form label" for="serviceCrew"></label>Service Crew:</label>
+                                            <input type="number" class="form-control" id="serviceCrew" placeholder="10"
+                                                required>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="form label" for="Marines">Marines:</label>
+                                            <input type="number" class="form-control" id="Marines" placeholder="10"
+                                                required>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="form label" for="weaponryOutput">Weaponry Output
+                                                (mass/sec):</label>
+                                            <input type="number" class="form-control" id="weaponryOutput"
+                                                placeholder="500" required>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="form label" for="hardpoints">Hardpoints:</label>
+                                            <input type="number" class="form-control" id="hardpoints" placeholder="500"
+                                                required>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label class="form label" for="travelSpeed">Travel Speed</label>
+                                            <input type="number" class="form-control" id="travelSpeed"
+                                                name="TravelSpeed" placeholder="1200" required>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <label class="form label" for="Thrust">Thrust</label>
+                                            <input type="number" class="form-control" id="thrust" name="Thrust"
+                                                placeholder="10000" required>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label class="form label" for="hyperspeed">Hyperspeed</label>
+                                            <input type="number" class="form-control" id="hyperspeed" name="Hyperspeed"
+                                                placeholder="1" required>
+                                        </div>
+                                        <hr class="my-4">
+                                        <button class="btn btn-primary btn-lg mt-3" type="submit">Submit</button>
                                     </div>
                                 </form>
                             </div>
