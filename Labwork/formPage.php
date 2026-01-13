@@ -57,7 +57,6 @@
         $thrust = (int) ($_POST["Thrust"] ?? 0);
         $hyperspeed = (int) ($_POST["Hyperspeed"] ?? 0);
     }
-
     ?>
 
     <div class="container">
