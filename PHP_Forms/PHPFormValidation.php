@@ -18,29 +18,32 @@
             <div class="row pt-4">
                 <aside class="col-2 d-none d-lg-block ps-4">
                     <div class="position-sticky pt-5" style="top: 4rem">
-                        <ul class="list-unstyled my-4">
-                            <li><a href="http://localhost/PHP_Labs/PHP_Forms/PHPFormManip.php" target="_blank"
-                                    class="text-decoration-none">PHP Forms</a></li>
-                            <li><a href="http://localhost/PHP_Labs/PHP_Forms/PHPGetDispatch.php" target="_blank"
-                                    class="text-decoration-none">PHP Dispatch - GET</a></li>
-                            <li><a href="http://localhost/PHP_Labs/PHP_Forms/PHPPostDispatch.php" target="_blank"
-                                    class="text-decoration-none">PHP Dispatch - POST</a></li>
+                        <ul class="list-unstyled my-4" style="font-size:16px;">
                             <li>
                                 <a href="http://localhost/PHP_Labs/PHP_Antics/PrintAndEcho.php" target="_blank"
-                                    class="text-decoration-none">Print and Echo in PHP</a>
+                                    class="text-decoration-none">PHP Print and Echo</a>
                             </li>
                             <li> <a href="http://localhost/PHP_Labs/PHP_Antics/DataTypes.php" target="_blank"
                                     class="text-decoration-none">PHP Data Types</a></li>
                             <li> <a href="http://localhost/PHP_Labs/PHP_Antics/CastingAndUtilityFunctions.php"
-                                    target="_blank" class="text-decoration-none">Casting and numeric utilities</a></li>
+                                    target="_blank" class="text-decoration-none">PHP Casting and numeric utilities</a>
+                            </li>
                             <li><a href="http://localhost/PHP_Labs/PHP_Antics/Constants.php" target="_blank"
-                                    class="text-decoration-none">Constants</a></li>
+                                    class="text-decoration-none">PHP Constants</a></li>
                             <li><a href="http://localhost/PHP_Labs/PHP_Antics/FlowControlAndLoops.php" target="_blank"
-                                    class="text-decoration-none">Control Flow And Loops</a></li>
+                                    class="text-decoration-none">PHP Control Flow And Loops</a></li>
                             <li><a href="http://localhost/PHP_Labs/PHP_Antics/Functions.php" target="_blank"
-                                    class="text-decoration-none">Functions in PHP</a></li>
+                                    class="text-decoration-none">PHP Functions</a></li>
                             <li><a href="http://localhost/PHP_Labs/PHP_Antics/ArrayManipulation.php" target="_blank"
-                                    class="text-decoration-none">Array Manipulation</a></li>
+                                    class="text-decoration-none">PHP Array Manipulation</a></li>
+                            <li><a href="http://localhost/PHP_Labs/PHP_Forms/PHPFormManip.php" target="_blank"
+                                    class="text-decoration-none">PHP Forms</a></li>
+                            <li><a href="http://localhost/PHP_Labs/PHP_Forms/PHPFormValidation.php" target="_blank"
+                                    class="text-decoration-none">PHP Form Validation</a></li>
+                            <li><a href="http://localhost/PHP_Labs/PHP_Forms/PHPGetDispatch.php" target="_blank"
+                                    class="text-decoration-none">PHP Dispatch - GET</a></li>
+                            <li><a href="http://localhost/PHP_Labs/PHP_Forms/PHPPostDispatch.php" target="_blank"
+                                    class="text-decoration-none">PHP Dispatch - POST</a></li>
                         </ul>
                     </div>
                 </aside>
@@ -102,6 +105,11 @@
                             <code>></code> to <code>&amp;lt</code> and <code>&amp;gt</code> respectively. This way, we
                             are protected from such insertion attacks.
                         </p>
+
+                        <p>A complete form example that merges PHP and HTML in validating and submittingdata will be
+                            found in a separate page, in order for the form to be as self contained as possible. For a
+                            quick redirect, please access this link: <a
+                                href="http://localhost/PHP_Labs/Labwork/formPage.php">PHP form sample</a>.</p>
                     </div>
                 </div>
                 <aside class="col-2 d-none d-lg-block ps-4">
@@ -114,6 +122,7 @@
                         </ul>
                     </div>
                 </aside>
+            </div>
         </main>
     </div>
 </body>
